@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:p="http://primefaces.org/ui" >
+    <h:head>
+        <title>Cadastro de vendedor</title>
+        <link href="../estilo.css" rel="stylesheet" type="text/css" />
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:fieldset legend="Cadastro de usuario">
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Nome: " for="nome" />
+                    <p:inputText id="nome" value="#{vendedorBean.vendedor.nome}"/>
+                    
+                    <p:outputLabel for="cpf" value="CPF: " />
+                    <p:inputMask id="cpf" value="#{vendedorBean.vendedor.cpf}" mask="999.999.999-99"/>
+        
+                    <p:outputLabel for="salario" value="Salario: " />
+                    <p:inputNumber id="salario" value="#{vendedorBean.vendedor.salario}"/>
+
+                    <p:outputLabel value="Login: " for="login" />
+                    <p:inputText id="login" value="#{vendedorBean.vendedor.login}"/>
+                                     
+                    <h:outputLabel for="senha" value="Senha: " />
+                    <p:password id="senha" value="#{vendedorBean.vendedor.senha}" match="senhaConfirmacao" label="senha" required="true" feedback="true"/>
+
+                    <h:outputLabel for="senhaConfirmacao" value="Confirme a senha: " />
+                    <p:password id="senhaConfirmacao" value="" label="senhaConfirmacao" required="true" />
+                    
+                    <p:commandButton type="reset" value="Limpar" />
+                    <p:commandButton id="btnCadastrarUsuario" value="Cadastrar" action="#{vendedorBean.cadastrar()}"/>
+                </p:panelGrid>
+            </p:fieldset>
+        </h:form>
+    </h:body>
+</html>

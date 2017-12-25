@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:p="http://primefaces.org/ui" >
+    <h:head>
+        <title>Cadastro de loja</title>
+        <link href="../estilo.css" rel="stylesheet" type="text/css" />
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:fieldset legend="Cadastro de loja">
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Nome fantasia: " for="nomeFantasia" />
+                    <p:inputText id="nomeFantasia" value=""/>
+                    
+                    <p:outputLabel value="Razao social: " for="razaoSocial" />
+                    <p:inputText id="razaoSocial" value=""/>
+                    
+                    <p:outputLabel value="CNPJ: " for="cnpj" />
+                    <p:inputMask id="cnpj" value="" mask="99.999.999/9999-99"/>
+        
+                    <p:outputLabel value="Telefone: "  for="telefone" />
+                    <p:inputMask id="telefone" value="" mask="(99) 9999-9999"/>
+                                     
+                    <p:outputLabel value="Email: " for="email" />
+                    <p:inputText id="email" value=""/>
+                    
+                    <p:commandButton type="reset" value="Limpar" />
+                    <p:commandButton id="btnCadastrarLoja" value="Cadastrar"/>
+                </p:panelGrid>
+            </p:fieldset>
+        </h:form>
+    </h:body>
+</html>
