@@ -7,6 +7,8 @@ import java.io.Serializable;
  * @author guilhermenascimento
  */
 public class Vendedor extends Usuario implements Serializable{
+    
+    
     private String cpf;
     private double salario;
 
