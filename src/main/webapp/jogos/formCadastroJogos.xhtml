@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Formulário de Cadastro de Jogos</title>
+        <link href="estilo.css" rel="stylesheet" type="text/css" />
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:fieldset legend="Cadastro de Jogos">
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Titulo do Jogo: " for="titulo" />
+                    <p:inputText id="titulo" value=""/>
+
+                    <p:outputLabel value="Desenvolvedor: " for="produtora" />
+                    <p:autoComplete id="produtora" value="" />
+                    
+                    <p:outputLabel value="Faixa Etaria: " for="faixaEtaria" />
+                    <p:selectOneMenu id="faixaEtaria" value="" >
+                        <f:selectItems value="#{faixaEtariaBean.faixaEtaria}"/>
+                    </p:selectOneMenu>
+                    
+                    <p:outputLabel value="Qtd. de Exemplares: " for="qtdExemplares" />
+                    <p:autoComplete id="qtdExemplares" value=""/>
+
+                    <p:commandButton id="btnCadastrarJogo" value="Cadastrar" />
+                </p:panelGrid>
+            </p:fieldset>
+        </h:form>
+    </h:body>
+</html>
