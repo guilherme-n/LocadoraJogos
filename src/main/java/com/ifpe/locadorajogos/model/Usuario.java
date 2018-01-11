@@ -1,15 +1,16 @@
 package com.ifpe.locadorajogos.model;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
-/**
- *
- * @author guilhermenascimento
- */
-//@Entity
-//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Usuario implements Serializable {
-    //@Id
+    
+    @Id
     private int id;
     private String nome;
     private String login;

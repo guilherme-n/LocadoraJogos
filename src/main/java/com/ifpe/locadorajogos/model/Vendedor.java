@@ -1,13 +1,13 @@
 package com.ifpe.locadorajogos.model;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
-/**
- *
- * @author guilhermenascimento
- */
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Vendedor extends Usuario implements Serializable{
-    
     
     private String cpf;
     private double salario;
